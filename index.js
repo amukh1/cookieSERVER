@@ -27,7 +27,7 @@ app.get('/api/newSave', (req, res) => {
         console.log(saves.sort(function(a, b) {
             return a - b;
           }))
-          fs.writeFile('array.txt', `let saves = [${saves}]`, function (err) {
+          fs.writeFile('array.js', `let saves = [${saves}]`, function (err) {
             if (err) return console.log(err);
             console.log('Successfully saved a users data!');
           });
